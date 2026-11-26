@@ -1,0 +1,18 @@
+[project]
+name = "secure-context-gateway"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["mcp>=2,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 130
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E702"]
